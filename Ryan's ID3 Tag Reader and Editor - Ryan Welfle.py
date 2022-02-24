@@ -44,6 +44,8 @@ An example of an individual file name to enter is:
 Basically, just type in the file name as it appears in your folder, with the
 ".mp3" extension as well.
 
+Last modified: 02/24/22
+
 """
 
 import sys      ###used to exit the program
