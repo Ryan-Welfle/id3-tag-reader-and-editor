@@ -244,6 +244,12 @@ def main():    #entire program is in this function
                             main()
                         except TinyTagException:
                             print('Invalid entry!')
+                            main()
+                else:
+                    print('\nERROR!')
+                    print('\nThere are either:\n\n• no files in the selected pathway, or \n• your pathway or filename entry was invalid or typed incorrectly, or \n• you\'ve entered an invalid option')
+                    print('\nReturning to start of program ... \n')
+                    main()
         if amountoffiles == 'a':                      #this is the 'if' statement that triggers if you want to look at all files at the end of the pathway
             tracks = []
             for root, dirs, files, in os.walk(pathway):
@@ -265,8 +271,10 @@ def main():    #entire program is in this function
                             print(' ')
                         except TinyTagException:  # this is a TinyTag-related exception that occurs if there's a corrpution in one of the ID3 tags
                             print('Error!\n')
+                            main()
                         except TypeError:       # this exception prevents the program from shutting down if there is a 'None' value in one of the tags
                             print('Error!\n')
+                            main()
             if tracks == []:            # this statements checks if the "tracks" list is empty; if it is, then the pathway likely leads to no mp3 files
                 print('\nERROR!')
                 print('\nThere are either:\n\n• no files in the selected pathway, or \n• your pathway entry was invalid')
@@ -308,15 +316,14 @@ def main():    #entire program is in this function
                                                     print(' ')
                                             except TinyTagException:
                                                 print('Error!\n')
+                                                main()
                                             except TypeError:
                                                 print('Error!\n')
+                                                main()
                         except ValueError:
                             print('\nERROR!')
                             print('\nInvalid entry!')
                             print('\nReturning to start of program ... \n')
-                            main()
-                        dothings = input('These are all the results that could be found ... \nPress enter to return to the main menu: ').lower().strip() #whether many, or zero files emerge after filtering, this line of text pops up to send the user back to the program beginning
-                        while True:
                             main()
                         if choosebitrate == 'a':  # if choosing to search between one bitrate and another
                             print('For a bitrate range ... \nenter the lowest and highest bitrate of the range')
@@ -343,8 +350,10 @@ def main():    #entire program is in this function
                                                 print(' ')
                                         except TinyTagException:
                                             print('Error!\n')
+                                            main()
                                         except TypeError:
                                             print('Error!\n')
+                                            main()
                             dothings = input('These are all the results that could be found ... \nPress enter to return to the main menu: ').lower().strip()
                             while True:
                                 main()
@@ -371,8 +380,10 @@ def main():    #entire program is in this function
                                             print(' ')
                                     except TinyTagException:
                                         print('Error!\n')
+                                        main()
                                     except TypeError:
                                         print('Error!\n')
+                                        main()
                         dothings = input('These are all the results that could be found ... \nPress enter to return to the main menu: ').lower().strip()
                         while True:
                             main()
@@ -410,6 +421,7 @@ def main():    #entire program is in this function
                                                         print(' ')
                                                 except TinyTagException:
                                                     print('Error!\n')
+                                                    main()
                                                 except TypeError:
                                                     print('Error!\n')
                                                     dothings = input('These are all the results that could be found ... \nPress enter to return to the main menu: ').lower().strip()
@@ -442,8 +454,10 @@ def main():    #entire program is in this function
                                                     print(' ')
                                             except TinyTagException:
                                                 print('Error!\n')
+                                                main()
                                             except TypeError:
                                                 print('Error!\n')
+                                                main()
                             dothings = input('These are all the results that could be found ... \nPress enter to return to the main menu: ').lower().strip()
                             while True:
                                 main() 
@@ -480,8 +494,10 @@ def main():    #entire program is in this function
                                                     print(' ')
                                             except TinyTagException:
                                                 print('Error!\n')
+                                                main()
                                             except TypeError:
                                                 print('Error!\n')
+                                                main()
                             except ValueError:
                                 print('\nERROR!')
                                 print('\nInvalid entry!')
@@ -517,8 +533,10 @@ def main():    #entire program is in this function
                                                 print(' ')
                                         except TinyTagException:
                                             print('Error!\n')
+                                            main()
                                         except TypeError:
                                             print('Error!\n')
+                                            main()
                             dothings = input('These are all the results that could be found ... \nPress enter to return to the main menu: ').lower().strip()
                             while True:
                                 main()
@@ -545,8 +563,10 @@ def main():    #entire program is in this function
                                                 print(' ')
                                         except TinyTagException:
                                             print('Error!\n')
+                                            main()
                                         except TypeError:
                                             print('Error!\n')
+                                            main()
                             dothings = input('These are all the results that could be found ... \nPress enter to return to the main menu: ').lower().strip()
                             while True:
                                 main()
@@ -573,8 +593,10 @@ def main():    #entire program is in this function
                                             print(' ')
                                     except TinyTagException:
                                         print('Error!\n')
+                                        main()
                                     except TypeError:
                                         print('Error!\n')
+                                        main()
                         dothings = input('These are all the results that could be found ... \nPress enter to return to the main menu: ').lower().strip()
                         while True:
                             main()
@@ -601,8 +623,10 @@ def main():    #entire program is in this function
                                             print(' ')
                                     except TinyTagException:
                                         print('Error!\n')
+                                        main()
                                     except TypeError:
                                         print('Error!\n')
+                                        main()
                         dothings = input('These are all the results that could be found ... \nPress enter to return to the main menu: ').lower().strip()
                         while True:
                             main()
@@ -636,8 +660,10 @@ def main():    #entire program is in this function
                                                         print(' ')
                                                 except TinyTagException:
                                                     print('Error!\n')
+                                                    main()
                                                 except TypeError:
                                                     print('Error!\n')
+                                                    main()
                                     dothings = input('These are all the results that could be found ... \nPress enter to return to the main menu: ').lower().strip()
                                     while True:
                                         main()                        
@@ -663,8 +689,10 @@ def main():    #entire program is in this function
                                                         print(' ')
                                                 except TinyTagException:
                                                     print('Error!\n')
+                                                    main()
                                                 except TypeError:
                                                     print('Error!\n')
+                                                    main()
                                     dothings = input('These are all the results that could be found ... \nPress enter to return to the main menu: ').lower().strip()
                                     while True:
                                         main()  
@@ -700,14 +728,14 @@ def main():    #entire program is in this function
                                                     print(' ')
                                             except TinyTagException:
                                                 print('Error!\n')
+                                                main()
                                             except TypeError:
                                                 print('Error!\n')
+                                                main()
                                 dothings = input('These are all the results that could be found ... \nPress enter to return to the main menu: ').lower().strip()
                                 while True:
                                     main()
                             else:
-                                print('\nERROR!')
-                                print('\nInvalid entry!')
                                 print('\nReturning to start of program ... \n')
                                 main()
                         except ValueError:
@@ -878,27 +906,23 @@ def main():    #entire program is in this function
                                             if lookokay == 'no':
                                                 continue
                                     else:
-                                        print('\nERROR!')
-                                        print('\nInvalid entry!')
                                         print('\nReturning to start of program ... \n')
                                         main()
                                 except TinyTagException:
                                     print('Error!\n')
+                                    main()
                                 except TypeError:
                                     print('Error!\n')
+                                    main()
                         else:
                             print('\nERROR!')
-                            print('\nInvalid entry!')
+                            print('\nThere are either:\n\n• no files in the selected pathway, or \n• your pathway or filename entry was invalid or typed incorrectly')
                             print('\nReturning to start of program ... \n')
-                            main() 
+                            main()
                 else:
-                    print('\nERROR!')
-                    print('\nInvalid entry!')
                     print('\nReturning to start of program ... \n')
                     main()
         else:
-            print('\nERROR!')
-            print('\nInvalid entry!')
             print('\nReturning to start of program ... \n')
             main() 
                                                                                  
